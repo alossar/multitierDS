@@ -20,6 +20,26 @@
 			<value></value>
 		</managed-property>
 	</managed-bean>
+	<managed-bean>
+		<managed-bean-name>accountManagerController</managed-bean-name>
+		<managed-bean-class>edu.icesi.tics.dsmultitier.web.AccountManagerController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+		<managed-property>
+			<property-name>tableForm</property-name>
+			<property-class>javax.faces.component.UIForm</property-class>
+			<value></value>
+		</managed-property>
+		<managed-property>
+			<property-name>user</property-name>
+			<property-class>edu.icesi.tics.ds.multitier.ejb.bo.UserAccountBO</property-class>
+			<value></value>
+		</managed-property>
+		<managed-property>
+			<property-name>users</property-name>
+			<property-class>java.util.List</property-class>
+			<value></value>
+		</managed-property>
+	</managed-bean>
 	<navigation-rule>
 		<display-name>login</display-name>
 		<from-view-id>/login.jsp</from-view-id>
@@ -42,6 +62,22 @@
 		<navigation-case>
 			<from-outcome>failed</from-outcome>
 			<to-view-id>/failed.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>login</display-name>
+		<from-view-id>/login.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>list</from-outcome>
+			<to-view-id>/users.jsp</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<display-name>users</display-name>
+		<from-view-id>/users.jsp</from-view-id>
+		<navigation-case>
+			<from-outcome>change</from-outcome>
+			<to-view-id>/edit.jsp</to-view-id>
 		</navigation-case>
 	</navigation-rule>
 

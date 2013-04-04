@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13626197497130" configfile="/MultitierWebApp/WebContent/WEB-INF/faces-config.xml">
-  <nodes xsi:type="pageflow:PFPage" name="login" x="118" y="219" id="pf13626203931051" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf13626203931182 pf13626203931193 pf13626203931194" path="/login.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="error" x="427" y="74" id="pf13626203931195" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13626203931182" path="/error.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="welcome" x="421" y="192" id="pf13626203931196" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13626203931193" path="/welcome.jsp"/>
-  <nodes xsi:type="pageflow:PFPage" name="failed" x="427" y="312" id="pf13626203931197" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf13626203931194" path="/failed.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="login" x="120" y="216" id="pf13626203931051" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf13626203931182 pf13626203931193 pf13626203931194 pf13649996330632" path="/login.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="error" x="380" y="72" id="pf13626203931195" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13626203931182" path="/error.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="welcome" x="421" y="168" id="pf13626203931196" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13626203931193" path="/welcome.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="failed" x="433" y="288" id="pf13626203931197" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf13626203931194" path="/failed.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="users" x="380" y="420" id="pf13649994915371" referenceLink="//@navigationRule.4/@fromViewId|" outlinks="pf13650341892454" inlinks="pf13649996330632" path="/users.jsp"/>
+  <nodes xsi:type="pageflow:PFPage" name="edit" x="516" y="420" id="pf13650341892455" referenceLink="//@navigationRule.4/@navigationCase.0/@toViewId|" inlinks="pf13650341892454" path="/edit.jsp"/>
   <links id="pf13626203931182" target="pf13626203931195" source="pf13626203931051" outcome="error"/>
   <links id="pf13626203931193" target="pf13626203931196" source="pf13626203931051" outcome="welcome"/>
   <links id="pf13626203931194" target="pf13626203931197" source="pf13626203931051" outcome="failed"/>
+  <links id="pf13649996330632" target="pf13649994915371" source="pf13626203931051" outcome="list"/>
+  <links id="pf13650341892454" target="pf13650341892455" source="pf13649994915371" outcome="change"/>
 </pageflow:Pageflow>

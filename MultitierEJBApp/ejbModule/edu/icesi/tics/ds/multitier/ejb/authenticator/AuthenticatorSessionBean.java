@@ -4,7 +4,8 @@ import javax.ejb.Stateless;
 import javax.persistence.Query;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
-import co.edu.icesi.ds.tics.multtier.model.UserAccount;
+
+import co.edu.icesi.ds.tics.multitier.model.UserAccount;
 
 /**
  * Session Bean implementation class AuthenticatorSessionBean

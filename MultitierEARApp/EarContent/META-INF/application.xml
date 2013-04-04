@@ -10,7 +10,7 @@
   <module>
     <ejb>MultitierEJBApp.jar</ejb>
   </module>
-    <module>
+  <module>
     <ejb>MulttierJPAApp.jar</ejb>
   </module>
 </application>
